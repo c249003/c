@@ -1,0 +1,288 @@
+/* 全体のスタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #272727;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #e53935;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ナビゲーションのスタイル */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* サブナビゲーションのスタイル */
+.sub-nav {
+    margin: 20px 0;
+}
+
+.sub-nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sub-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.sub-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.sub-nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツのスタイル */
+.main {
+    padding: 20px;
+}
+
+/* コンテンツセクションのスタイル */
+.content-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.content-section h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    color: #26a69a;
+}
+
+.content-section h3 {
+    font-size: 1.5em;
+    color: #26a69a;
+    margin-top: 20px;
+}
+
+.content-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* ティア表のスタイル */
+.tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tier-table th, .tier-table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+.tier-table th {
+    background-color: #3e3e3e;
+    color: #26a69a;
+}
+
+.tier-table td {
+    background-color: #2e2e2e;
+}
+
+/* キャラクタータイルのスタイル */
+.character-tile {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.character-tile img {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.character-tile p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+/* キャラクター行のスタイル */
+.character-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* キャラクター紹介、武器紹介、マップ紹介の共通スタイル */
+.character-intro, .weapon-intro, .map-intro {
+    display: flex;
+    align-items: center;
+    background-color: #3e3e3e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.character-image, .weapon-image, .map-image {
+    flex: 1;
+}
+
+.character-image img, .weapon-image img, .map-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.character-details, .weapon-details, .map-details {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.character-details h3, .weapon-details h4, .map-details h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+    color: #26a69a;
+}
+
+.character-details p, .weapon-details p, .map-details p {
+    margin: 5px 0;
+}
+
+/* 武器カテゴリとマップカテゴリのスタイル */
+.weapon-category, .map-category {
+    margin-bottom: 2rem;
+}
+
+.weapon-category h3, .map-category h3 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #26a69a;
+}
+
+/* 水平線のスタイル */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #444;
+    margin: 20px 0;
+}
+
+/* フッターのスタイル */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #272727;
+    border-top: 1px solid #444;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 動画ラッパーのスタイル */
+.video-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* フォームのスタイル */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+
+/* ボタンのスタイル */
+button {
+    background-color: #26a69a;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e857a;
+}
+
+/* トップに戻るボタンのスタイル */
+#topButton {
+    display: none; /* 最初は非表示 */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#topButton:hover {
+    background-color: #1e857a;
+}
