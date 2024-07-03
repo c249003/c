@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant - バインド マップ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Valorant 紹介ページ</a></h1>
+        <nav>
+            <ul>
+                <li><a href="rules.html"><button class="nav-button"><i class="fas fa-book"></i>ルール</button></a></li>
+                <li><a href="agents.html"><button class="nav-button"><i class="fas fa-user-secret"></i>エージェント</button></a></li>
+                <li><a href="weapons.html"><button class="nav-button"><i class="fas fa-crosshairs"></i>武器</button></a></li>
+                <li><a href="maps.html"><button class="nav-button"><i class="fas fa-map"></i>マップ</button></a></li>
+                <li><a href="play-videos.html"><button class="nav-button"><i class="fas fa-video"></i>プレイ動画</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="content-section">
+            <h2>バインドのマップ情報・特徴</h2>
+            <p>バインドはユニークなテレポーターシステムを持つマップで、2つの主要サイト間を迅速に移動できるテレポーターが設置されています。この特徴により、急速なローテーションが可能であり、素早い戦術の変更が求められます。</p>
+            <p>また、バインドは狭い通路と開けたエリアの組み合わせが特徴で、さまざまな射程での交戦が発生します。AショートやBロングなどのエリアでは特に注意が必要です。</p>
+
+            <h3>バインドのおすすめ構成</h3>
+            <p>バインドでは、テレポーターを利用した奇襲や素早いローテーションが重要となるため、機動力のあるエージェントや範囲攻撃を持つエージェントが効果的です。「フェニックス」や「レイズ」などが特に有用です。また、「サイファー」や「キルジョイ」などのエリアコントロール能力を持つエージェントも有効です。</p>
+
+            <h3>バインドの基本的な攻め方</h3>
+            <h4>Aサイト側の立ち回り</h4>
+            <p>バインドのAサイトを攻める際は、AショートとAランプを迅速に制圧することが重要です。テレポーターを利用して急襲することも戦術の一つです。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。</p>
+
+            <h4>Bサイト側の立ち回り</h4>
+            <p>バインドのBサイトを攻める際は、Bロングとフッカーの制圧が重要です。特にBロングは長距離の射線が通るため、スナイパーライフルが有効です。テレポーターを活用してバックサイトへの侵入を狙うことも効果的です。</p>
+
+            <h3>バインドの基本的な守り方</h3>
+            <h4>Aサイト側の立ち回り</h4>
+            <p>Aサイトを守る際は、AショートとAランプを抑えることが重要です。テレポーターからの急襲に備えて、常に周囲を警戒し、迅速に対応できるようにします。</p>
+
+            <h4>Bサイト側の立ち回り</h4>
+            <p>Bサイトを守る際は、Bロングとフッカーを確実に抑えます。テレポーターを利用したバックサイトへの侵入に備え、適切なポジショニングを取ります。スナイパーライフルを持ったエージェントが特に有効です。</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Valorant</p>
+    </footer>
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">トップに戻る</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function() { toggleTopButton() };
+
+        function toggleTopButton() {
+            var topButton = document.getElementById("topButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant - アイスボックス マップ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Valorant 紹介ページ</a></h1>
+        <nav>
+            <ul>
+                <li><a href="rules.html"><button class="nav-button"><i class="fas fa-book"></i>ルール</button></a></li>
+                <li><a href="agents.html"><button class="nav-button"><i class="fas fa-user-secret"></i>エージェント</button></a></li>
+                <li><a href="weapons.html"><button class="nav-button"><i class="fas fa-crosshairs"></i>武器</button></a></li>
+                <li><a href="maps.html"><button class="nav-button"><i class="fas fa-map"></i>マップ</button></a></li>
+                <li><a href="play-videos.html"><button class="nav-button"><i class="fas fa-video"></i>プレイ動画</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="content-section">
+            <h2>アイスボックスのマップ情報・特徴</h2>
+            <p>アイスボックスは高低差のある地形と狭い通路が特徴的なマップで、素早いエイムと戦術的な動きが求められます。また、AサイトとBサイトには多くの隠れ場所があり、戦術的な攻撃と防御が必要です。</p>
+            <p>このマップは特に近接戦闘が多く発生するため、ショットガンやサブマシンガンが有効な場合が多いです。</p>
+
+            <h3>アイスボックスのおすすめ構成</h3>
+            <p>アイスボックスでは、高低差を活用できるエージェントや範囲攻撃を持つエージェントが効果的です。「ジェット」や「レイズ」などが特に有用です。また、「ヴァイパー」や「サイファー」などのエリアコントロール能力を持つエージェントも有効です。</p>
+
+            <h3>アイスボックスの基本的な攻め方</h3>
+            <h4>Aサイト側の立ち回り</h4>
+            <p>アイスボックスのAサイトを攻める際は、AメインとAスノーマンを迅速に制圧することが重要です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。また、高所からの攻撃も効果的です。</p>
+
+            <h4>Bサイト側の立ち回り</h4>
+            <p>アイスボックスのBサイトを攻める際は、BロングとBホールの制圧が重要です。特にBロングは長距離の射線が通るため、スナイパーライフルが有効です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。</p>
+
+            <h3>アイスボックスの基本的な守り方</h3>
+            <h4>Aサイト側の立ち回り</h4>
+            <p>Aサイトを守る際は、AメインとAスノーマンを抑えることが重要です。高所からの射線を活用し、敵の侵攻を防ぎます。</p>
+
+            <h4>Bサイト側の立ち回り</h4>
+            <p>Bサイトを守る際は、BロングとBホールを抑えることが重要です。Bサイトは広範なエリアをカバーする必要があるため、適切なポジショニングと迅速なローテーションが求められます。</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Valorant</p>
+    </footer>
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">トップに戻る</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function() { toggleTopButton() };
+
+        function toggleTopButton() {
+            var topButton = document.getElementById("topButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

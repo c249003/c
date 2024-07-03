@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant - ヘイブン マップ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Valorant 紹介ページ</a></h1>
+        <nav>
+            <ul>
+                <li><a href="rules.html"><button class="nav-button"><i class="fas fa-book"></i>ルール</button></a></li>
+                <li><a href="agents.html"><button class="nav-button"><i class="fas fa-user-secret"></i>エージェント</button></a></li>
+                <li><a href="weapons.html"><button class="nav-button"><i class="fas fa-crosshairs"></i>武器</button></a></li>
+                <li><a href="maps.html"><button class="nav-button"><i class="fas fa-map"></i>マップ</button></a></li>
+                <li><a href="play-videos.html"><button class="nav-button"><i class="fas fa-video"></i>プレイ動画</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="content-section">
+            <h2>ヘイブンのマップ情報・特徴</h2>
+            <p>ヘイブンは他のマップと異なり、3つのプラントサイト（Aサイト、Bサイト、Cサイト）を持つユニークなマップです。この特徴により、攻守双方で迅速な判断と柔軟な戦術が求められます。</p>
+            <p>また、ヘイブンは広範なエリアと狭い通路が混在しており、さまざまな射程での交戦が発生します。特にガレージやミッドエリアでは激しい戦闘が頻繁に起こります。</p>
+
+            <h3>ヘイブンのおすすめ構成</h3>
+            <p>ヘイブンでは、広範なエリアをカバーできるエージェントや迅速にローテーションできるエージェントが重要です。「ジェット」や「オーメン」などの機動力のあるキャラが特に有用です。また、「サイファー」や「キルジョイ」などのエリアコントロール能力を持つエージェントも効果的です。</p>
+
+            <h3>ヘイブンの基本的な攻め方</h3>
+            <h4>Aサイト側の立ち回り</h4>
+            <p>ヘイブンのAサイトを攻める際は、AロングとAショートを迅速に制圧することが重要です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。また、Aヘヴンの制圧も攻撃の鍵となります。</p>
+
+            <h4>Bサイト側の立ち回り</h4>
+            <p>ヘイブンのBサイトを攻める際は、ミッドからの侵攻が効果的です。Bサイトは他のサイトに比べて防衛が難しいため、迅速なエントリーが求められます。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。</p>
+
+            <h4>Cサイト側の立ち回り</h4>
+            <p>ヘイブンのCサイトを攻める際は、Cロングとガレージを制圧することが重要です。特にCロングは長距離の射線が通るため、スナイパーライフルが有効です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。</p>
+
+            <h3>ヘイブンの基本的な守り方</h3>
+            <h4>Aサイト側の立ち回り</h4>
+            <p>Aサイトを守る際は、AロングとAショートを抑えることが重要です。Aヘヴンからの射線を活用し、敵の侵攻を防ぎます。</p>
+
+            <h4>Bサイト側の立ち回り</h4>
+            <p>Bサイトを守る際は、ミッドとガレージからの侵攻を警戒します。迅速にローテーションし、必要に応じて他のサイトを支援します。</p>
+
+            <h4>Cサイト側の立ち回り</h4>
+            <p>Cサイトを守る際は、Cロングとガレージを抑えることが重要です。Cサイトは広範なエリアをカバーする必要があるため、適切なポジショニングと迅速なローテーションが求められます。</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Valorant</p>
+    </footer>
+    <button onclick="scrollToTop()" id="topButton" title="Go to top">トップに戻る</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function() { toggleTopButton() };
+
+        function toggleTopButton() {
+            var topButton = document.getElementById("topButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
