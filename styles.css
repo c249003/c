@@ -449,3 +449,57 @@ hr {
 .weapon-table tr:nth-child(even) td {
     background-color: #f2f2f2;
 }
+
+/* チーム構成テーブルのスタイル */
+.team-composition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.team-composition-table th {
+    background-color: #f09494;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.team-composition-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.team-composition-table img {
+    width: 80px; /* 画像のサイズを調整 */
+    height: auto;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+/* ローテーション画像のスタイル */
+.rotation-image-section {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* 必要に応じて調整 */
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.rotation-image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rotation-image-section img.fade-out {
+    opacity: 0;
+}
+
+.rotation-image-section img.fade-in {
+    opacity: 1;
+}

@@ -22,14 +22,39 @@
     </header>
     <main class="main">
         <section class="content-section">
-            <h2>ヘイブンのマップ情報・特徴</h2>
+            <h2>ヘイブンのマップ</h2>
+            <div class="map-image">
+                <img src="img/haven.png" alt="ヘイブンマップ">
+            </div>
+            
+            <h3>情報・特徴</h3>
             <p>ヘイブンは他のマップと異なり、3つのプラントサイト（Aサイト、Bサイト、Cサイト）を持つユニークなマップです。この特徴により、攻守双方で迅速な判断と柔軟な戦術が求められます。</p>
             <p>また、ヘイブンは広範なエリアと狭い通路が混在しており、さまざまな射程での交戦が発生します。特にガレージやミッドエリアでは激しい戦闘が頻繁に起こります。</p>
+
+            <h3>全体マップ・マップの詳細</h3>
+            <div class="map-image">
+                <img src="img/havenmap.jpg" alt="アセント全体マップ">
+            </div>
 
             <h3>ヘイブンのおすすめ構成</h3>
             <p>ヘイブンでは、広範なエリアをカバーできるエージェントや迅速にローテーションできるエージェントが重要です。「ジェット」や「オーメン」などの機動力のあるキャラが特に有用です。また、「サイファー」や「キルジョイ」などのエリアコントロール能力を持つエージェントも効果的です。</p>
 
+            <!-- ヘイブンのおすすめチーム構成テーブル -->
+            <table class="team-composition-table">
+                <tr>
+                    <th colspan="5">おすすめチーム構成</th>
+                </tr>
+                <tr>
+                    <td><img src="img/jett.png" alt="ジェット"><br>ジェット</td>
+                    <td><img src="img/omen.png" alt="オーメン"><br>オーメン</td>
+                    <td><img src="img/kiijoy.png" alt="キルジョイ"><br>キルジョイ</td>
+                    <td><img src="img/skye.png" alt="スカイ"><br>スカイ</td>
+                    <td><img src="img/sova.png" alt="ソーヴァ"><br>ソーヴァ</td>
+                </tr>
+            </table>
+
             <h3>ヘイブンの基本的な攻め方</h3>
+             
             <h4>Aサイト側の立ち回り</h4>
             <p>ヘイブンのAサイトを攻める際は、AロングとAショートを迅速に制圧することが重要です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。また、Aヘヴンの制圧も攻撃の鍵となります。</p>
 
@@ -40,6 +65,11 @@
             <p>ヘイブンのCサイトを攻める際は、Cロングとガレージを制圧することが重要です。特にCロングは長距離の射線が通るため、スナイパーライフルが有効です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。</p>
 
             <h3>ヘイブンの基本的な守り方</h3>
+            <!-- ローテーション画像のセクション -->
+            <div class="map-image">
+                <img id="mapImage" src="img/haven_defense.jpg" alt="ヘイブンマップ">
+            </div>
+
             <h4>Aサイト側の立ち回り</h4>
             <p>Aサイトを守る際は、AロングとAショートを抑えることが重要です。Aヘヴンからの射線を活用し、敵の侵攻を防ぎます。</p>
 
@@ -48,6 +78,7 @@
 
             <h4>Cサイト側の立ち回り</h4>
             <p>Cサイトを守る際は、Cロングとガレージを抑えることが重要です。Cサイトは広範なエリアをカバーする必要があるため、適切なポジショニングと迅速なローテーションが求められます。</p>
+        
         </section>
     </main>
     <footer>
@@ -69,6 +100,25 @@
                 topButton.style.display = "none";
             }
         }
+
+        // 画像ローテーションのためのJavaScript
+        var mapImages = ["img/haven_op.jpg", "img/haven_op1.jpg", "img/haven_op2.jpg", "img/haven_op3.jpg"];
+        var currentIndex = 0;
+        var mapImageElement = document.getElementById("mapImage");
+
+        function rotateImages() {
+            mapImageElement.classList.remove("fade-in");
+            mapImageElement.classList.add("fade-out");
+
+            setTimeout(function() {
+                currentIndex = (currentIndex + 1) % mapImages.length;
+                mapImageElement.src = mapImages[currentIndex];
+                mapImageElement.classList.remove("fade-out");
+                mapImageElement.classList.add("fade-in");
+            }, 500); // 0.5秒のフェードアウトの後に画像を切り替える
+        }
+
+        setInterval(rotateImages, 4000); // 4秒ごとに画像をローテーション
     </script>
 </body>
 </html>

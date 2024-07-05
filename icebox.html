@@ -22,14 +22,39 @@
     </header>
     <main class="main">
         <section class="content-section">
-            <h2>アイスボックスのマップ情報・特徴</h2>
+            <h2>アイスボックスのマップ</h2>
+            <div class="map-image">
+                <img src="img/icebox.jpg" alt="アイスボックスマップ">
+            </div>
+            
+            <h3>情報・特徴</h3>
             <p>アイスボックスは高低差のある地形と狭い通路が特徴的なマップで、素早いエイムと戦術的な動きが求められます。また、AサイトとBサイトには多くの隠れ場所があり、戦術的な攻撃と防御が必要です。</p>
             <p>このマップは特に近接戦闘が多く発生するため、ショットガンやサブマシンガンが有効な場合が多いです。</p>
+
+            <h3>全体マップ・マップの詳細</h3>
+            <div class="map-image">
+                <img src="img/iceboxmap.jpg" alt="アセント全体マップ">
+            </div>
 
             <h3>アイスボックスのおすすめ構成</h3>
             <p>アイスボックスでは、高低差を活用できるエージェントや範囲攻撃を持つエージェントが効果的です。「ジェット」や「レイズ」などが特に有用です。また、「ヴァイパー」や「サイファー」などのエリアコントロール能力を持つエージェントも有効です。</p>
 
+            <!-- アイスボックスのおすすめチーム構成テーブル -->
+            <table class="team-composition-table">
+                <tr>
+                    <th colspan="5">おすすめチーム構成</th>
+                </tr>
+                <tr>
+                    <td><img src="img/jett.png" alt="ジェット"><br>ジェット</td>
+                    <td><img src="img/gekko.png" alt="ゲッコー"><br>ゲッコー</td>
+                    <td><img src="img/sova.png" alt="ソーヴァ"><br>ソーヴァ</td>
+                    <td><img src="img/viper.png" alt="ヴァイパー"><br>ヴァイパー</td>
+                    <td><img src="img/cypher.png" alt="サイファー"><br>サイファー</td>
+                </tr>
+            </table>
+
             <h3>アイスボックスの基本的な攻め方</h3>
+             
             <h4>Aサイト側の立ち回り</h4>
             <p>アイスボックスのAサイトを攻める際は、AメインとAスノーマンを迅速に制圧することが重要です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。また、高所からの攻撃も効果的です。</p>
 
@@ -37,11 +62,17 @@
             <p>アイスボックスのBサイトを攻める際は、BロングとBホールの制圧が重要です。特にBロングは長距離の射線が通るため、スナイパーライフルが有効です。スモークやフラッシュを使用してクリアリングを行い、安全にサイトに侵入します。</p>
 
             <h3>アイスボックスの基本的な守り方</h3>
+            <!-- ローテーション画像のセクション -->
+            <div class="map-image">
+                <img id="mapImage" src="img/icebox_defense.jpg" alt="アイスボックスマップ">
+            </div>
+
             <h4>Aサイト側の立ち回り</h4>
             <p>Aサイトを守る際は、AメインとAスノーマンを抑えることが重要です。高所からの射線を活用し、敵の侵攻を防ぎます。</p>
 
             <h4>Bサイト側の立ち回り</h4>
             <p>Bサイトを守る際は、BロングとBホールを抑えることが重要です。Bサイトは広範なエリアをカバーする必要があるため、適切なポジショニングと迅速なローテーションが求められます。</p>
+        
         </section>
     </main>
     <footer>
@@ -63,6 +94,25 @@
                 topButton.style.display = "none";
             }
         }
+
+        // 画像ローテーションのためのJavaScript
+        var mapImages = ["img/icebox_op.jpg", "img/icebox_op1.jpg", "img/icebox_op2.jpg", "img/icebox_op3.jpg"];
+        var currentIndex = 0;
+        var mapImageElement = document.getElementById("mapImage");
+
+        function rotateImages() {
+            mapImageElement.classList.remove("fade-in");
+            mapImageElement.classList.add("fade-out");
+
+            setTimeout(function() {
+                currentIndex = (currentIndex + 1) % mapImages.length;
+                mapImageElement.src = mapImages[currentIndex];
+                mapImageElement.classList.remove("fade-out");
+                mapImageElement.classList.add("fade-in");
+            }, 500); // 0.5秒のフェードアウトの後に画像を切り替える
+        }
+
+        setInterval(rotateImages, 4000); // 4秒ごとに画像をローテーション
     </script>
 </body>
 </html>
